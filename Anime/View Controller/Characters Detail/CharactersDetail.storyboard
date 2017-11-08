@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="o4B-hi-zAQ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Characters Detail View Controller-->
+        <scene sceneID="rHI-LF-UFI">
+            <objects>
+                <viewController id="o4B-hi-zAQ" customClass="CharactersDetailViewController" customModule="Anime" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aI3-Gv-8WJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="300" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hva-sf-mC9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Hva-sf-mC9" firstAttribute="leading" secondItem="FsA-Zi-Jbn" secondAttribute="leading" id="MwH-sD-Qf9"/>
+                            <constraint firstItem="Hva-sf-mC9" firstAttribute="top" secondItem="FsA-Zi-Jbn" secondAttribute="top" id="PB8-ed-VMG"/>
+                            <constraint firstItem="Hva-sf-mC9" firstAttribute="bottom" secondItem="FsA-Zi-Jbn" secondAttribute="bottom" id="kNP-V8-rPW"/>
+                            <constraint firstItem="Hva-sf-mC9" firstAttribute="trailing" secondItem="FsA-Zi-Jbn" secondAttribute="trailing" id="rXy-Y1-LhJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FsA-Zi-Jbn"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="charactersDetailUITableView" destination="Hva-sf-mC9" id="tkW-8F-jT2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4IT-ey-Lx2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-207.19999999999999" y="168.6656671664168"/>
+        </scene>
+    </scenes>
+</document>

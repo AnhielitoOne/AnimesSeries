@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dFE-4o-DwX">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Anime-->
+        <scene sceneID="5Nr-Yp-c05">
+            <objects>
+                <viewController id="dFE-4o-DwX" customClass="AnimeViewController" customModule="Anime" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="poD-LC-wKT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2fC-rl-6FQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tXs-x7-i9A">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="5" minY="10" maxX="5" maxY="5"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="2fC-rl-6FQ" firstAttribute="trailing" secondItem="mEh-bk-bRN" secondAttribute="trailing" id="7Ue-Du-o36"/>
+                            <constraint firstItem="2fC-rl-6FQ" firstAttribute="leading" secondItem="mEh-bk-bRN" secondAttribute="leading" id="MsO-zd-VLA"/>
+                            <constraint firstItem="2fC-rl-6FQ" firstAttribute="bottom" secondItem="mEh-bk-bRN" secondAttribute="bottom" id="S5T-fk-RFF"/>
+                            <constraint firstItem="2fC-rl-6FQ" firstAttribute="top" secondItem="mEh-bk-bRN" secondAttribute="top" id="kF5-UT-RII"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mEh-bk-bRN"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Anime" id="jOI-jm-I6c">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="66G-kU-fvR">
+                            <color key="tintColor" red="0.52941176469999995" green="0.61960784310000006" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="searchAction:" destination="dFE-4o-DwX" id="LHw-ci-CEg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="animeUICollectionView" destination="2fC-rl-6FQ" id="M9I-Ma-yui"/>
+                        <outlet property="seeAllUIBarButtonItem" destination="W6n-ho-mzU" id="n2o-6Q-qyL"/>
+                        <segue destination="N6B-od-rna" kind="show" identifier="animeDetailSegue" id="80F-bt-n45"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OCn-VC-cek" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <barButtonItem title="All" id="W6n-ho-mzU">
+                    <connections>
+                        <action selector="seeAllSeriesAction:" destination="dFE-4o-DwX" id="RRN-eu-YuG"/>
+                    </connections>
+                </barButtonItem>
+            </objects>
+            <point key="canvasLocation" x="768.79999999999995" y="180.35982008995504"/>
+        </scene>
+        <!--AnimeDetail-->
+        <scene sceneID="7Zs-V3-cBW">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AnimeDetail" id="N6B-od-rna" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lpb-PD-gR9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1365" y="142"/>
+        </scene>
+    </scenes>
+</document>
